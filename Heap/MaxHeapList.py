@@ -17,16 +17,16 @@ class MaxHeap:
         self.__float_up(self.size() - 1)
 
     def peek(self):
-        if self.heap[1]:
-            return self.heap[1]
+        if self.heap[0]:
+            return self.heap[0]
         else:
             return None
 
     def pop(self):
         if self.size() > 2:
-            self.__swap(1, self.size() - 1)
+            self.__swap(0, self.size() - 1)
             max = self.heap.pop()
-            self.__bubble_down(1)
+            self.__bubble_down(0)
         elif self.size() == 2:
             max = self.heap.pop()
         else:
@@ -59,9 +59,3 @@ class MaxHeap:
     def __str__(self):
         return str(self.heap)
 
-
-m = MaxHeap([95, 3, 21])
-m.push(10)
-print(m)
-print(m.pop())
-print(m.peek())

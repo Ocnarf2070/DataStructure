@@ -1,14 +1,6 @@
 from collections import deque
 
 
-#
-# my_queue = deque()
-# my_queue.append(5)
-# my_queue.append(10)
-# print(my_queue)
-# print(my_queue.popleft())
-
-
 class Queue:
     def __init__(self):
         self.queue = deque()
@@ -39,9 +31,3 @@ class Queue:
 
     def get_size(self):
         return self.size
-
-# my_queue = Queue()
-# my_queue.enqueue(5)
-# my_queue.enqueue(10)
-# print(my_queue)
-# print(my_queue.dequeue())

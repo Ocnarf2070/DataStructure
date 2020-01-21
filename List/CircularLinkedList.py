@@ -64,24 +64,3 @@ class CircularLinkedList:
             aux += str(this_node) + ' -> '
         return aux
 
-# cll = CircularLinkedList()
-# for i in [5, 7, 3, 8, 9]:
-#     cll.add(i)
-#
-# print("size=" + str(cll.size))
-# print(cll.find(8))
-# print(cll.find(12))
-#
-# my_node = cll.root
-# print(my_node, end=' -> ')
-# for i in range(8):
-#     my_node = my_node.next_node
-#     print(my_node, end=' -> ')
-# print()
-#
-# print(cll)
-# cll.remove(8)
-# print(cll.remove(15))
-# print("size=" + str(cll.size))
-# cll.remove(5)  # delete root node
-# print(cll)

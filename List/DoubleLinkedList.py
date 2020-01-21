@@ -66,20 +66,3 @@ class DoubleLinkedList:
             this_node = this_node.next_node
         aux += str(this_node)
         return aux
-
-# dll = DoubleLinkedList()
-# for i in [5, 9, 3, 8, 9]:
-#     dll.add(i)
-#
-# print("size=" + str(dll.size))
-# print(dll)
-# dll.remove(8)
-# print("size=" + str(dll.size))
-#
-# print(dll.remove(15))
-# print(dll.find(15))
-# dll.add(21)
-# dll.add(22)
-# dll.remove(5)
-# print(dll)
-# print(dll.last.prev_node)

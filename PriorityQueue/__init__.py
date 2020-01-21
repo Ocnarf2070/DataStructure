@@ -1,0 +1,2 @@
+from PriorityQueue.BinaryHeapPriorityQueue import BHPriorityQueue
+from PriorityQueue.LinkedPriorityQueue import LinkedPriorityQueue

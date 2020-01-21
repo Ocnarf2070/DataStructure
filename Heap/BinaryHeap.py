@@ -5,6 +5,9 @@ class BinaryHeap:
             self.heap.append(item)
             self.__float_up(len(self.heap) - 1)
 
+    def __len__(self):
+        return len(self.heap)
+
     def is_empty(self):
         return len(self.heap) == 0
 

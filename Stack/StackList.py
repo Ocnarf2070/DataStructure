@@ -1,12 +1,12 @@
 # Stack using Python list
-my_stack = list()
-my_stack.append(2)
-my_stack.append(7)
-my_stack.append(13)
-my_stack.append(3)
-print(my_stack)
-print(my_stack.pop())
-print(my_stack)
+# my_stack = list()
+# my_stack.append(2)
+# my_stack.append(7)
+# my_stack.append(13)
+# my_stack.append(3)
+# print(my_stack)
+# print(my_stack.pop())
+# print(my_stack)
 
 
 # class
@@ -14,8 +14,11 @@ class Stack:
     def __init__(self):
         self.stack = list()
 
-    def size(self):
+    def __len__(self):
         return len(self.stack)
+
+    def size(self):
+        return len(self)
 
     def is_empty(self):
         return self.size() == 0
@@ -38,12 +41,11 @@ class Stack:
     def __str__(self):
         return str(self.stack)
 
-
-my_stack = Stack()
-my_stack.push(1)
-my_stack.push(3)
-print(my_stack)
-print(my_stack.pop())
-print(my_stack.peek())
-print(my_stack.pop())
-print(my_stack.pop())
+# my_stack = Stack()
+# my_stack.push(1)
+# my_stack.push(3)
+# print(my_stack)
+# print(my_stack.pop())
+# print(my_stack.peek())
+# print(my_stack.pop())
+# print(my_stack.pop())

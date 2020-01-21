@@ -53,17 +53,16 @@ class LinkedList:
         aux += str(this_node)
         return aux
 
-
-myList = LinkedList()
-myList.add(5)
-myList.add(3)
-myList.add(8)
-myList.add(12)
-print(myList)
-
-print("size=" + str(myList.size))
-myList.remove(8)
-print("size=" + str(myList.size))
-print(myList.find(5))
-print(myList.root)
-print(myList)
+# myList = LinkedList()
+# myList.add(5)
+# myList.add(3)
+# myList.add(8)
+# myList.add(12)
+# print(myList)
+#
+# print("size=" + str(myList.size))
+# myList.remove(8)
+# print("size=" + str(myList.size))
+# print(myList.find(5))
+# print(myList.root)
+# print(myList)

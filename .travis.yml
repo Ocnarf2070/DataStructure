@@ -27,6 +27,9 @@ matrix:
           - ${HOME}/.conan
       after_success:
         - codecov -F MacOS -X gcov
+install:
+  - source .CI/travis/install.sh
+  - source .CI/travis/install_requirements.sh
 
 script:
   - source .CI/travis/build_and_test.sh

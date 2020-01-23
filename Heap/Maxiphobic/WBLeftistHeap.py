@@ -14,6 +14,22 @@ class Tree:
     def is_empty(self):
         return self.data is None
 
+    def is_heap(self):
+        if self.is_empty():
+            return True
+        else:
+            left, right = self.left, self.right
+            b = self.__less_eq(left) and self.__less_eq(right)
+            b = b and left.is_heap() if left is not None else True
+            b = b and right.is_heap() if right is not None else True
+            return b
+
+    def __less_eq(self, n):
+        if n is None:
+            return True
+        else:
+            return self.data <= n.data
+
     def __merge(self, h2):
         if h2 is None:
             return
@@ -54,6 +70,13 @@ class Tree:
             else:
                 self.__init__()
             return elem
+
+    @staticmethod
+    def make_heap(l: list):
+        heap = Tree()
+        for el in l:
+            heap.push(el)
+        return heap
 
     def __str__(self):
         text = str(self.data) + ' ' if self.data is not None else ''

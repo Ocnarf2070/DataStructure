@@ -1,6 +1,6 @@
 import copy
 
-import Heap.BinaryHeap as bh
+import Heap.Maxiphobic.BinaryHeap as bh
 
 
 class BHPriorityQueue:

@@ -1,7 +1,10 @@
 import random
 import unittest
 
-from PriorityQueue import *
+from PriorityQueue import LinkedPriorityQueue as PriorityQueue
+
+
+# from PriorityQueue import BHPriorityQueue as PriorityQueue
 
 
 def next_int():
@@ -10,7 +13,7 @@ def next_int():
 
 class AxiomsPriorityQueue(unittest.TestCase):
     def setUp(self):
-        self.queue = LinkedPriorityQueue()
+        self.queue = PriorityQueue()
 
     def test_ax1(self):
         # Queue is empty initially
@@ -36,7 +39,7 @@ class AxiomsPriorityQueue(unittest.TestCase):
     def test_ax5(self):
         # Enqueue two values in a queue, if in another queue it is enqueue the minimum of the two values, the peek of 
         # both will be equals
-        aux = LinkedPriorityQueue()
+        aux = PriorityQueue()
         x, y = next_int(), next_int()
         self.queue.enqueue(x)
         self.queue.enqueue(y)
@@ -46,7 +49,7 @@ class AxiomsPriorityQueue(unittest.TestCase):
     def test_ax6(self):
         # Enqueue two values and then dequeue is equals to first enqueue the minimum value, then dequeue and finally
         # enqueue the maximum value
-        aux = LinkedPriorityQueue()
+        aux = PriorityQueue()
         x, y = next_int(), next_int()
         self.queue.enqueue(x)
         self.queue.enqueue(y)

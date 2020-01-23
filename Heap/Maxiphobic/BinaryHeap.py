@@ -11,6 +11,22 @@ class BinaryHeap:
     def is_empty(self):
         return len(self.heap) == 0
 
+    def is_heap(self, i=0, n=0):
+        arr = self.heap
+        if n == 0:
+            n = len(self) - 1
+        # If a leaf node
+        if i > int((n - 2) / 2):
+            return True
+
+        # If an internal node and is greater
+        # than its children, and same is
+        # recursively true for the children
+        return arr[i] <= arr[2 * i + 1] and \
+               arr[i] <= arr[2 * i + 2] and \
+               self.is_heap(2 * i + 1, n) and \
+               self.is_heap(2 * i + 2, n)
+
     def __less_than(self, idx1, idx2):
         return self.heap[idx1] < self.heap[idx2]
 
@@ -56,6 +72,11 @@ class BinaryHeap:
             _min = self.heap.pop()
             self.__bubble_down(0)
             return _min
+
+    @staticmethod
+    def make_heap(l: list):
+        heap = BinaryHeap(l)
+        return heap
 
     def __str__(self):
         return str(self.heap)

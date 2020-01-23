@@ -34,7 +34,7 @@ def same_elements(l1: list, l2: list):
     return set(l1) == set(l2)
 
 
-class AxiomsPriorityQueue(unittest.TestCase):
+class AxiomsMaxiphobicHeap(unittest.TestCase):
     def setUp(self):
         self.heap = Heap()
 

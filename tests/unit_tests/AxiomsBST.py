@@ -17,7 +17,7 @@ def next_ints():
     return random.sample(range(1, 100), 10)
 
 
-class AxiomsPriorityQueue(unittest.TestCase):
+class AxiomsBST(unittest.TestCase):
     def setUp(self):
         self.bst = BST()
 

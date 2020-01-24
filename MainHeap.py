@@ -7,6 +7,7 @@ print(m)
 print(m.pop())
 print(m.peek())
 print(m)
+print(m.is_heap())
 print('\n')
 
 print("MaxHeap")
@@ -29,4 +30,5 @@ print(wblh.peek())
 print(wblh)
 while not wblh.is_empty():
     print('Pop:' + str(wblh.pop()))
+    print(wblh.is_heap())
     print(wblh)

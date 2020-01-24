@@ -1,3 +1,3 @@
-from Heap.BinaryHeap import BinaryHeap
 from Heap.MaxHeapList import MaxHeap
-from Heap.WBLeftistHeap import Tree as WBLHeap
+from Heap.Maxiphobic.BinaryHeap import BinaryHeap
+from Heap.Maxiphobic.WBLeftistHeap import Tree as WBLHeap

@@ -1,3 +1,6 @@
+import operator
+
+
 class Tree:
     def __init__(self, data=None, left=None, right=None):
         self.data = data
@@ -21,6 +24,28 @@ class Tree:
 
     def is_empty(self):
         return self.data is None
+
+    def is_elem(self, elem):
+        return self.find(elem) is not False
+
+    def __for_all(self, func, br):
+        if br is None:
+            return True
+        else:
+            c1 = func(br.data, self.data)
+            c2 = c1 and self.__for_all(func, br.left)
+            c3 = c2 and self.__for_all(func, br.right)
+            return c3
+
+    def is_bst(self):
+        if self.is_empty():
+            return True
+        else:
+            c1 = self.__for_all(operator.lt, self.left)
+            c2 = c1 and self.__for_all(operator.gt, self.right)
+            c3 = c2 and self.left.is_bst() if self.left is not None else True
+            c4 = c3 and self.right.is_bst() if self.right is not None else True
+            return c4
 
     def insert(self, data):
         if self.is_empty():
@@ -83,12 +108,12 @@ class Tree:
                 self.data = temp
         elif self.data > data:
             if self.left is None:
-                return False
+                return
             else:
                 self.left = self.left.delete(data)
         else:
             if self.right is None:
-                return False
+                return
             else:
                 self.right = self.right.delete(data)
         return self
@@ -109,3 +134,8 @@ class Tree:
             if self.right is not None:
                 self.right.inorder()
 
+    def __str__(self):
+        text = str(self.left) if self.left is not None else ''
+        text += str(self.data) + ' ' if self.data is not None else ''
+        text += str(self.right) if self.right is not None else ''
+        return text

@@ -36,7 +36,7 @@ class BinaryHeap:
 
     def __float_up(self, idx):
         while idx != 0:
-            idxParent = idx // 2 - 1
+            idxParent = (idx - 1) // 2
             if self.__less_than(idx, idxParent):
                 self.__swap(idx, idxParent)
                 idx = idxParent
